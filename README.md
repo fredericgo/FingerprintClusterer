@@ -7,9 +7,11 @@ This is adapted from OpenRefine's clustering function.
 	make
 	./clusterer PaperKeywords.txt PaperKeywords.clean -c 1,2
 
-* -c id_col,string col:
-	- specify column number of original id and the corresponding string column to cluster
+<dl>
+<dt> -c id_col,string col: </dt>
+	<dd>specify column number of original id and the corresponding string column to cluster</dd>
 
-* There will be two output files:
-	- outputfilename : input file with specified columns replaced by cluster name and cluster id
-	- outputfilename+"link" : column1 new_id / column2 original_id
+<dt>Output files:</dt>
+	<dd> outputfilename : input file with specified columns replaced by cluster name and cluster id</dd>
+	<dd> outputfilename+"link" : column1 new_id / column2 original_id</dd>
+</dl>
