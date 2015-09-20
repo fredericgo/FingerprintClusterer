@@ -63,12 +63,20 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "FieldsOfStudy.txt"
+            argument = "PaperKeywords.sample"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = ""
-            isEnabled = "NO">
+            argument = "output"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-c"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "1,2"
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
       <EnvironmentVariables>

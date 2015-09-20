@@ -22,6 +22,7 @@ public:
     BinningClusterer(string keyername);
     void computeClusters(vector<string>);
     void visit(vector<string> column);
+    void visit_modify(int id_col, int string_col, ifstream& inf, ofstream& of, ofstream& ofref);
     unordered_map<string, unordered_map<string, int> >* getMap();
     vector<unordered_map<string, int> >* getClusters();
 

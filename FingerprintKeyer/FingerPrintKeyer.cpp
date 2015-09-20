@@ -66,7 +66,7 @@ string FingerPrintKeyer::asciify(string s) {
     string output;
     wstring_convert<codecvt_utf8<char32_t>, char32_t> conv;
     
-    for (char32_t c: conv.from_bytes(s)) {
+    for (auto c: conv.from_bytes(s)) {
         output += translate(c);
     }
     
