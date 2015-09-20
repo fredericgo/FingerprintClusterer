@@ -1,4 +1,4 @@
-# fingerprintClusterer
+# FingerprintClusterer
 This is adapted from OpenRefine's clustering function.
 
 ## Usage:
