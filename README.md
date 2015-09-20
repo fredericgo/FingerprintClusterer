@@ -1,14 +1,15 @@
 # fingerprintClusterer
-this is adapted from OpenRefine's clustering function
+This is adapted from OpenRefine's clustering function.
 
-Usage:
-cd FingerprintKeyer 
-make
-./clusterer inputfilename outputfile -c 1,2
+## Usage:
 
--c id_col,string col:
+	cd FingerprintKeyer 
+	make
+	./clusterer inputfilename outputfile -c 1,2
+
+* -c id_col,string col:
 	specify column number of original id and the corresponding string column to cluster
 
-There will be two output files:
+* There will be two output files:
 	outputfilename : input file with specified columns replaced by cluster name and cluster id
 	outputfilename+"link" : column1 new_id / column2 original_id
