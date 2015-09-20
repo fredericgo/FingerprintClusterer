@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
     BinningClusterer* clusterer = new BinningClusterer("fingerprint");
     
     if (argc < 3) {
-        cout << "Usage: ./clusterer filename" << endl;
+        cout << "Usage: clusterer input output -c id_col,string_col" << endl;
         exit(EXIT_FAILURE);
     }
     
@@ -47,7 +47,10 @@ int main(int argc, const char * argv[]) {
                 id_col = stoi(cols[0]);
                 string_col = stoi(cols[1]);
             }
-            else exit(EXIT_FAILURE);
+            else {
+                cout << "Usage: clusterer input output -c id_col,string_col" << endl;
+                exit(EXIT_FAILURE);
+            }
         }
     }
     /*

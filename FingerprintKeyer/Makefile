@@ -2,7 +2,7 @@ CC = g++
 CC_FLAGS = -w
 
 
-EXEC = run
+EXEC = clusterer
 SOURCES = $(wildcard *.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
 
