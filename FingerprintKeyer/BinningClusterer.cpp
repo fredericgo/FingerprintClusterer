@@ -87,6 +87,7 @@ void BinningClusterer::visit_modify(int id_col, int string_col, ifstream &inf, o
             refof << nid << "\t" << id << endl;
         } else {
             map[key] = id;
+            of << line << endl;
         }
 
         l++;
