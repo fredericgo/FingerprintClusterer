@@ -80,7 +80,8 @@ void BinningClusterer::visit_modify(int id_col, int string_col, ifstream &inf, o
                 } else {
                     of << *iter;
                 }
-                of << "\t";
+                if (iter != elems.end())
+                    of << "\t";
             }
             of << endl;
             
