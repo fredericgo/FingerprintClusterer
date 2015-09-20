@@ -5,7 +5,7 @@ This is adapted from OpenRefine's clustering function.
 
 	cd FingerprintKeyer 
 	make
-	./clusterer inputfilename outputfile -c 1,2
+	./clusterer PaperKeywords.txt PaperKeywords.clean -c 1,2
 
 * -c id_col,string col:
 	specify column number of original id and the corresponding string column to cluster
