@@ -3,7 +3,7 @@ CC_FLAGS = -w
 CXXFLAGS = -g -std=c++11 -Wall -pedantic
 
 
-EXEC = clusterer
+EXEC = run
 SOURCES = $(wildcard *.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
 
