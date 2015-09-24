@@ -62,7 +62,12 @@ void BinningClusterer::visit_modify(int id_col, int string_col, ifstream &inf, o
     while (getline(inf, line)) {
         elems = split(line, '\t');
         //if (l > 10) break;
-        string id = elems[id_col - 1];
+        bool modify_id = id_col > 0 ? true : false;
+        string id = "";
+        
+        if (modify_id)
+            id = elems[id_col - 1];
+        
         string s = elems[string_col - 1];
         //cout << id << " " << s << endl;
 
@@ -73,7 +78,7 @@ void BinningClusterer::visit_modify(int id_col, int string_col, ifstream &inf, o
             
             for (auto iter = elems.begin(); iter != elems.end(); iter++) {
                 int idx = int(iter - elems.begin());
-                if (idx == id_col - 1) {
+                if (modify_id && (idx == id_col - 1)) {
                     of << nid;
                 } else if (idx == string_col - 1) {
                     of << key;
@@ -84,8 +89,7 @@ void BinningClusterer::visit_modify(int id_col, int string_col, ifstream &inf, o
                     of << "\t";
             }
             of << endl;
-            
-            refof << nid << "\t" << id << endl;
+            if (modify_id) refof << nid << "\t" << id << endl;
         } else {
             map[key] = id;
             of << line << endl;

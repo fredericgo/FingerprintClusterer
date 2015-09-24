@@ -43,9 +43,15 @@ int main(int argc, const char * argv[]) {
         if (string(argv[i]) == "-c") {
             vector<string> cols;
             if (i + 1 < argc) {
-                cols = split(argv[i+1], ',');
-                id_col = stoi(cols[0]);
-                string_col = stoi(cols[1]);
+                string s = argv[i+1];
+                if (s.find(',') != string::npos) {
+                    cols = split(argv[i+1], ',');
+                    id_col = stoi(cols[0]);
+                    string_col = stoi(cols[1]);
+                } else {
+                    id_col = -1;
+                    string_col = stoi(s);
+                }
             }
             else {
                 cout << "Usage: clusterer input output -c id_col,string_col" << endl;
